@@ -1,18 +1,33 @@
+const express = require("express");
+const app = express();
 
-const Discord = require("discord.js");
+app.listen(() => console.log("start btrolie"));
+
+app.use('/ping', (req, res) => {
+  res.send(new Date());
+});
+
+
+const Discord = require('discord.js');
 const client = new Discord.Client();
-
-
-client.on('message', roodx=>{
-  var rr = ['hi','hello','waht','good','sad'];
-  if(roodx.content === 'hi'){
-   var embed = new Discord.RichEmbed()
-   .setColor('RANDOM')
-   .setDescription(`${rr[Math.floor(Math.random() * rr.length)]}`)
-   roodx.channel.sendEmbed(embed)
-  }
-})
-
+const cmd = require("node-cmd");
+const ms = require("ms");
+const fs = require('fs');
+const ytdl = require("ytdl-core");
+const canvas = require("canvas");
+const convert = require("hh-mm-ss")
+const fetchVideoInfo = require("youtube-info");
+const simpleytapi = require('simple-youtube-api')
+const util = require("util")
+const gif = require("gif-search");
+const jimp = require("jimp");
+const guild = require('guild');
+const hastebins = require('hastebin-gen');
+const getYoutubeID = require('get-youtube-id');
+const pretty = require("pretty-ms");
+const moment = require('moment');
+const request = require('request');
+const dateFormat = require('dateformat');
 
 const prefix = "."
 const developers = "751426909669425243"
