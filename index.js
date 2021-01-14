@@ -14,7 +14,8 @@ client.on('message', roodx=>{
 })
 
 
-
+const prefix = "."
+const developers = "751426909669425243"
 
 //كود اقتراحات
 let sug99 = JSON.parse(fs.readFileSync("./suges.json", 'utf8'));
